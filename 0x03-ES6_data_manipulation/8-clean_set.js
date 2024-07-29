@@ -1,10 +1,6 @@
 export default function cleanSet(set, startString) {
-  let arr = [];
-  if (
-    typeof set !== 'object' ||
-    typeof startString !== 'string' ||
-    startString.length === 0
-  ) {
+  const arr = [];
+  if (typeof set !== 'object' || typeof startString !== 'string' || startString.length === 0) {
     return '';
   }
   for (const word of set) {
@@ -12,5 +8,5 @@ export default function cleanSet(set, startString) {
       arr.push(word.slice(startString.length));
     }
   }
-  return arr.join('-')
+  return arr.join('-');
 }
